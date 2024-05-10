@@ -58,7 +58,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
                 i1=i1+1;
-               dateButton.setText(i2+"/"+i1+"/"+i);
+//               dateButton.setText(i2+"/"+i1+"/"+i);
             }
         };
         Calendar cal = Calendar.getInstance();
