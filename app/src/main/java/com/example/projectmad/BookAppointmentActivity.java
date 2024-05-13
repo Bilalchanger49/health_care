@@ -5,12 +5,13 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -18,12 +19,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
-
 public class BookAppointmentActivity extends AppCompatActivity {
     EditText ed1,ed2,ed3,ed4;
     TextView tv;
+    Button btnBack;
     private DatePickerDialog datePickerDialog;
     private TimePickerDialog timePickerDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +36,15 @@ public class BookAppointmentActivity extends AppCompatActivity {
         ed2=findViewById(R.id.editTextAppAddress);
         ed3=findViewById(R.id.editTextAppContactNumber);
         ed4=findViewById(R.id.editTextAppFees);
-//Text isn't editable
+        btnBack=findViewById(R.id.buttonAppBack);
+
+        // Text isn't editable
         ed1.setKeyListener(null);
         ed2.setKeyListener(null);
         ed3.setKeyListener(null);
         ed4.setKeyListener(null);
 
-        Intent it = new Intent();
+        Intent it = getIntent(); // Corrected line
         String title=it.getStringExtra("text1");
         String fullname=it.getStringExtra("text2");
         String address=it.getStringExtra("text3");
@@ -52,13 +56,23 @@ public class BookAppointmentActivity extends AppCompatActivity {
         ed2.setText(address);
         ed3.setText(contact);
         ed4.setText("Cons Fees"+fees+"/-");
+
+        // Set OnClickListener for the back button
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BookAppointmentActivity.this, DoctorDetailsActivity.class));
+            }
+        });
+
     }
-    private  void initDatePicker(){
+
+    private void initDatePicker(){
         DatePickerDialog.OnDateSetListener dateSetListener= new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
                 i1=i1+1;
-//               dateButton.setText(i2+"/"+i1+"/"+i);
+                // dateButton.setText(i2+"/"+i1+"/"+i);
             }
         };
         Calendar cal = Calendar.getInstance();
