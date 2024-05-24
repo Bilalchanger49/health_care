@@ -36,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
-                /*String username= edUsername.getText().toString();
+            //    startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                String username= edUsername.getText().toString();
                 String password= edPassword.getText().toString();
                 Database db = new Database(getApplicationContext(),"healthcare",null,1);
                 if(username.length()==0 || password.length()==0){
@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                     }else{
                         Toast.makeText(getApplicationContext(),"Invalid username and Password",Toast.LENGTH_SHORT).show();
                     }
-                }*/
+                }
             }
         });
         // If we click on Register new user it redirects to new Activity

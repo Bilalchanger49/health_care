@@ -9,10 +9,10 @@
     tools:context=".LabTestDetailsActivity">
 <!--HealthCare-->
     <TextView
-        android:id="@+id/textViewDDName"
+        android:id="@+id/textView_logo4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="24 * 7 HEALTHCARE"
+        android:text="24*7 HEALTHCARE"
         android:textColor="@color/purple_200"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -20,42 +20,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045"
-        />
+        app:layout_constraintVertical_bias="0.00999999" />
     <!--  Deliver Location title -->
     <TextView
         android:id="@+id/textView_logo_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="628dp"
-        android:text="Deliver Location Islamabad"
+        android:text="Deliver Location : Islamabad"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDName"
-        app:layout_constraintVertical_bias="0.01999998" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_logo4" />
 <!--    LabTest and Packages-->
     <TextView
         android:id="@+id/textViewLDPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="LabTest and Packages"
+        android:text="Lab Test and Package"
         android:textColor="@color/yellowLight"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_logo_6"/>
-<!--Back-->
-    <!--    Add To Cart-->
-    <!--MultiLine-->
-
-    <!--TextView-->
+    <!--Back-->
     <Button
         android:id="@+id/buttonLDBack"
         android:layout_width="wrap_content"
@@ -64,23 +58,23 @@
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
-
+    <!--    Add To Cart-->
     <Button
         android:id="@+id/buttonLDAddToCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="16dp"
         android:text="Add To Cart"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonLDBack"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLDBack"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
-
+    <!--MultiLine-->
     <EditText
         android:id="@+id/editTextLDTextMultiline"
-        android:layout_width="312dp"
-        android:layout_height="373dp"
+        android:layout_width="299dp"
+        android:layout_height="402dp"
         android:editable="false"
         android:ems="10"
         android:gravity="start|top"
@@ -89,24 +83,25 @@
         android:text="Hi \nHello"
         android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/textViewLDPackageName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLDPackageName"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="179dp" />
+        tools:layout_editor_absoluteY="149dp" />
 
+    <!--TextView-->
     <TextView
         android:id="@+id/textViewLDTotalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="TextView"
         android:textColor="@color/yellowLight"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTop0f="@+id/buttonLDAddToCart"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLDAddToCart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLDTextMultiline" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLDTextMultiline"
+        app:layout_constraintVertical_bias="0.517"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
