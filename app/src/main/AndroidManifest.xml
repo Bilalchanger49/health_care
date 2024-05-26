@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMad">
         <activity
+            android:name=".OrderDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".LabTestBookActivity"
             android:exported="false" />
         <activity
