@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectMad">
         <activity
+            android:name=".CartBuyMedicineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyMedicineDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyMedicineActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderDetailsActivity"
             android:exported="false" />
         <activity
