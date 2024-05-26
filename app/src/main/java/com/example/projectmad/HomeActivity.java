@@ -21,9 +21,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        SharedPreferences sharedpreferences =getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
-        String username =sharedpreferences.getString("username","").toString();
-        Toast.makeText(getApplicationContext(),"Welcome "+username,Toast.LENGTH_SHORT).show();
+        SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+        String username = sharedpreferences.getString("username", "").toString();
+        Toast.makeText(getApplicationContext(), "Welcome " + username, Toast.LENGTH_SHORT).show();
         //Card Exit Activity  When we click on exit button it clear all local memory like sharedperferences and redirects to login Activity.
         CardView exit = findViewById(R.id.cardExit);
         exit.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.clear();
                 editor.apply();
-                startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+                startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             }
         });
         //find doctor
@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         findDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,FindDoctorActivity.class));
+                startActivity(new Intent(HomeActivity.this, FindDoctorActivity.class));
             }
         });
         //LabTest CardView
@@ -48,7 +48,23 @@ public class HomeActivity extends AppCompatActivity {
         labTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,LabTestActivity.class));
+                startActivity(new Intent(HomeActivity.this, LabTestActivity.class));
+            }
+        });
+
+        CardView orderDetails = findViewById(R.id.cardOrderDetails);
+        orderDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, OrderDetailsActivity.class));
+            }
+        });
+
+        CardView buyMedicine = findViewById(R.id.cardBuyMedicine);
+        buyMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, BuyMedicineActivity.class));
             }
         });
     }
