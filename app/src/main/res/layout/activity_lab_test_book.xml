@@ -9,23 +9,28 @@
     tools:context=".LabTestBookActivity">
 
     <Button
-        android:id="@+id/buttonBooking"
+        android:id="@+id/buttonLTBBooking"
         android:layout_width="345dp"
         android:layout_height="50dp"
         android:background="@drawable/btn_bg"
         android:shadowColor="@color/colorWhite"
         android:text="BOOK"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/editTextContact"
-        tools:layout_editor_absoluteY="605dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBContact"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
 
     <EditText
-        android:id="@+id/editTextPincode"
+        android:id="@+id/editTextLTBPincode"
         android:layout_width="348dp"
         android:layout_height="47dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="168dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
@@ -38,13 +43,12 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonBooking"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLTBBooking"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/editTextAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAddress"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBAddress"
+        app:layout_constraintVertical_bias="0.647" />
 
     <EditText
         android:id="@+id/editTextLTBFullname"
@@ -63,15 +67,14 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonBooking"
-        app:layout_constraintEnd_toEnd0f="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLTBBooking"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/textViewPackageName3"
         app:layout_constraintTop_toBottomOf="@+id/textViewPackageName3"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.175" />
 
     <EditText
-        android:id="@+id/editTextAddress"
+        android:id="@+id/editTextLTBAddress"
         android:layout_width="349dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
@@ -88,16 +91,15 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonBooking"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLTBBooking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/editTextFullname"
         app:layout_constraintTop_toBottomOf="@+id/editTextLTBFullname"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.06" />
 
     <EditText
-        android:id="@+id/editTextContact"
+        android:id="@+id/editTextLTBContact"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -114,13 +116,12 @@
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonBooking"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLTBBooking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/editTextPincode"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPincode"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBPincode"
+        app:layout_constraintVertical_bias="0.123" />
 
     <TextView
         android:id="@+id/textViewPackageName3"
@@ -129,13 +130,13 @@
         android:text="Please Fill All Details for Booking"
         android:textColor="@color/yellowLight"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonBooking"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLTBBooking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/textView_logo9"
         app:layout_constraintTop_toBottomOf="@+id/textView_logo9"
         app:layout_constraintVertical_bias="0.032" />
+
 
     <TextView
         android:id="@+id/textView_logo9"
@@ -145,11 +146,11 @@
         android:textColor="@color/purple_200"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottom0f="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonBooking"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLTBBooking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.062" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
