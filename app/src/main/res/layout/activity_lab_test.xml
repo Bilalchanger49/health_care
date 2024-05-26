@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
-        android:id="@+id/textViewDDtitle"
+        android:id="@+id/textViewCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LabTest and Packages"
@@ -52,8 +52,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewDDName"
         app:layout_constraintVertical_bias="0.101" />
 
+    <!--    Button-->
+
     <ListView
-        android:id="@+id/textView_logo_6"
+        android:id="@+id/textViewCart"
         android:layout_width="350dp"
         android:layout_height="500dp"
         android:layout_margin="10dp"
@@ -62,13 +64,13 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDtitle" />
-
-    <!--    Button-->
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTitle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/buttonLTBack"
+        android:id="@+id/buttonCartBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -79,13 +81,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonLTGoToCart"
+        android:id="@+id/buttonCartCheckout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="Go To Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent" />
 
 

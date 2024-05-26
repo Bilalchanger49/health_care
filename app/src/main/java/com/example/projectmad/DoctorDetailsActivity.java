@@ -71,8 +71,8 @@ public class DoctorDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_details);
 
-        tv=findViewById(R.id.textViewDDtitle);
-        btn=findViewById(R.id.buttonLTBack);
+        tv=findViewById(R.id.textViewCartTitle);
+        btn=findViewById(R.id.buttonCartBack);
 
         Intent it = getIntent();
         String title =it.getStringExtra("title");
@@ -115,7 +115,7 @@ public class DoctorDetailsActivity extends AppCompatActivity {
                 new String[]{"line1","line2","line3","line4","line5"},
                 new int[]{R.id.line_a,R.id.line_b,R.id.line_c,R.id.line_d,R.id.line_e}
                 );
-        ListView lst = findViewById(R.id.textView_logo_6);
+        ListView lst = findViewById(R.id.textViewCart);
         lst.setAdapter(sa);
         //when i click any hardcoded value in selecting doctor it redirects me to book appointment
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
