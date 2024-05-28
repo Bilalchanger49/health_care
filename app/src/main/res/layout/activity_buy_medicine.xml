@@ -75,14 +75,14 @@
 
     <Button
         android:id="@+id/buttonBMGoToCart"
-        android:layout_width="223dp"
-        android:layout_height="47dp"
+        android:layout_width="115dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="16dp"
         android:text="Go to Cart"
-        app:layout_constraintBottom_toBottom0f="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonBMBack"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="@+id/listViewBM"
         app:layout_constraintTop_toBottomOf="@+id/listViewBM"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.437" />
 </androidx.constraintlayout.widget.ConstraintLayout>
